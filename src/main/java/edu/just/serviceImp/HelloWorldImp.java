@@ -15,6 +15,7 @@ import java.util.List;
 public class HelloWorldImp implements HelloWorldService {
     @Autowired
     private HelloWorldDAO helloWorldDAO;
+
     public List<User> selectAll() {
         return helloWorldDAO.selectAll();
     }
