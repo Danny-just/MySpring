@@ -21,6 +21,11 @@ public class HelloWorldDAOImp implements HelloWorldDAO {
         user1.setId(2);
         users.add(user);
         users.add(user1);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e){
+            System.out.print("class not found");
+        }
         return users;
     }
 }
